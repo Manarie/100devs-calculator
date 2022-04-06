@@ -10,8 +10,42 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+#calcWrapper{
+  margin: 10px;
+}
+#displayWrapper{
+  display: block;
+  height: 100px;
+  width: 400px;
+  border: solid 1px black;
+  overflow: hidden;
+}
+
+#display{
+  font-size: 2rem;
+}
+
+span{
+    margin-left: 100%;
+    text-align: right;
+    float: right;
+    overflow: hidden;
+}
 
 
+#numericKeys {
+  height: 250px;
+  width: 400px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+button {
+  border-style: none;
+  height: 50px;
+  width: 100px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
