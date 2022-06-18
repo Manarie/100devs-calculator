@@ -64,9 +64,19 @@ class Calculator{
   }
 
   calculate(equation){
-    if (!equation.split('').includes('%')){
-      this.mainDisplay.textContent = new Function('return ' + equation)();
+    if (equation.split('').includes('%')){
+      equation = equation.split('+').join(' ').split('-').join(' ').split('*').join(' ').split('/').join(' ').split(' ')
+      equation.forEach((e, i) => {
+        if(e.split('').includes('%')){
+          equation[i] = parseFloat(equation[i]) * .01;
+        }
+      })
+      
+      console.log(equation)
     } 
+    // else
+    // this.mainDisplay.textContent = new Function('return ' + equation)();
+    // console.log(equation)
   }
 
 }
